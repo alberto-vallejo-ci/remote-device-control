@@ -4,6 +4,7 @@ ruby '1.9.3'
 
 gem 'haml'
 gem 'rails', '3.2.7'
+gem 'sqlite3'
 
 group :assets do
   gem 'backbone-on-rails'
@@ -15,8 +16,20 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :development do
-  gem 'jasmine-rails'
+group :development, :test do
+  gem 'brakeman'
   gem 'jasmine-headless-webkit',
     :git => 'git://github.com/johnbintz/jasmine-headless-webkit.git'
+  gem 'jasmine-rails'
+end
+
+group :test do
+  gem 'capybara-webkit'
+  gem 'capybara'
+  gem 'rb-fsevent', '~> 0.9.1'
+  gem 'guard-bundler'
+  gem 'guard-jasmine-headless-webkit'
+  gem 'guard-rspec'
+  gem 'guard-spork'
+  gem 'rspec-rails'
 end
