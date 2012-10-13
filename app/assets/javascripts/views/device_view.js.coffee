@@ -5,5 +5,5 @@ class RDC.Views.DeviceView extends Backbone.View
   template: JST['templates/device']
 
   render: ->
-    @$el.html @template @model
+    @$el.html @template @model.toJSON()
     @

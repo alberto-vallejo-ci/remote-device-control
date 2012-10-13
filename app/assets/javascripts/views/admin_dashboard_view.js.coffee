@@ -10,11 +10,14 @@ class RDC.Views.AdminDashboardView extends Backbone.View
     @$el.html @template()
 
     #devices view
-    adminDevicesView = new RDC.Views.AdminDevicesView()
+    adminDevicesView = new RDC.Views.AdminDevicesView
+      collection: RDC.DevicesCollection
+
     @$el.append adminDevicesView.render().el
 
     #settings view
     adminSettingsView = new RDC.Views.AdminSettingsView()
+
     @$el.append adminSettingsView.render().el
 
     @activeTab()

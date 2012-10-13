@@ -1,5 +1,7 @@
 class RDC.Views.AdminDevicesView extends Backbone.View
   initialize: ->
+    @collection.on 'add', @addDevice, @
+
     @newDevice = new RDC.Pusher 'devices',
                                 'new_connection',
                                 window.pusher,
@@ -16,8 +18,15 @@ class RDC.Views.AdminDevicesView extends Backbone.View
 
   render: ->
     @$el.html @template()
+    @addAllDevices @collection
     @
 
   addNewDevice: (data) =>
+    @collection.add data
+
+  addAllDevices: (devices) ->
+    devices.each @addDevice, @
+
+  addDevice: (data) ->
     deviceView = new RDC.Views.DeviceView model: data
-    @$('#devices-list').append deviceView.render().el
+    @$('#devices-list').prepend deviceView.render().el
