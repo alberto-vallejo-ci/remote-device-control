@@ -10,11 +10,25 @@ The principal function of this application is to send messages to the client app
 
 ##Setup
 
-**Notes:** 
+**Notes:**
 
-- Make sure you have installed QT. Follow instructions at [QT on Github](https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit) 
+- Make sure you have installed QT. Follow instructions from [capybara-webkit wiki: QT installation](https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit)
 
-- You need to declare the variables ENV['USER'] and ENV['PASSWORD'] in order to be able to login.
+- Export the following environment variables:
+
+```
+
+export PUSHER_APP_ID=19460
+
+export PUSHER_KEY=5b5b48789d293b83abdf
+
+export PUSHER_SECRET=c2c7653a5ec434543d37
+
+export USER=foo
+
+export PASSWORD=bar
+
+```
 
 - Heroku creditials, Username = 'foo', Password = 'bar'
 
@@ -23,7 +37,7 @@ Clone repositoy in your work station and bundle:
 
 ```
 
-$ git clone git@github.com:alberto-vallejo-ci/remote-device-control.git 
+$ git clone git@github.com:alberto-vallejo-ci/remote-device-control.git RDC
 
 $ cd RDC
 
