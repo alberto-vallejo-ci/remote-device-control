@@ -1,11 +1,13 @@
 class RDC.Routers.DashboardRouter extends Backbone.Router
   routes:
-    ''          : 'dashboard'
-    'settings'  : 'settings'
+    ''                : 'welcomeMessage'
+    'admin/:option'   : 'adminDashboard'
 
-  dashboard: ->
-    dashboardView = new RDC.Views.DashboardView
-    $('#container').html dashboardView.render().el
+  welcomeMessage: ->
+    $('#main').html 'Bienvenido!!'
 
-  settings: ->
-    $('#container').html 'settings'
+  adminDashboard: (option) ->
+    adminDashboardView = new RDC.Views.AdminDashboardView active: option
+    $('#main').html adminDashboardView.render().el
+
+

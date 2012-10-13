@@ -1,11 +1,18 @@
-class RDC.Views.DashboardView extends Backbone.View
+class RDC.Views.AdminDevicesView extends Backbone.View
   initialize: ->
     @newDevice = new RDC.Pusher 'devices',
                                 'new_connection',
                                 window.pusher,
                                 @addNewDevice
 
-  template: JST['templates/dashboard']
+
+  template: JST['templates/admin_devices']
+
+  tagName: 'article'
+
+  attributes:
+    id: 'devices'
+    style: 'display:none;'
 
   render: ->
     @$el.html @template()
@@ -13,5 +20,4 @@ class RDC.Views.DashboardView extends Backbone.View
 
   addNewDevice: (data) =>
     deviceView = new RDC.Views.DeviceView model: data
-    @$('#devices').append deviceView.render().el
-
+    @$('#devices-list').append deviceView.render().el

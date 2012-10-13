@@ -6,13 +6,8 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %nav
-      = render 'shared/navigation'
-
-    %section#main
-      .wrap
-        #container
-          = yield
+    #main.wrap
+      = yield
 
     %footer
       = render 'shared/footer'
