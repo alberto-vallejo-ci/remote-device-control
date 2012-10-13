@@ -5,6 +5,9 @@
 //
 //= require ./rdc
 //
+//= require_tree ./templates
+//= require_tree ./views
 //= require_tree ./routers
 //
 //= require rdc_pusher
+

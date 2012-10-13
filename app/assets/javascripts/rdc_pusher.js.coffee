@@ -1,16 +1,12 @@
 class RDC.Pusher
-  constructor: (@channel_name, @event_name, @pusher) ->
+  constructor: (@channel_name, @event_name, @pusher, @callback) ->
     @subscribe()
 
   subscribe: =>
     @channel = @pusher.subscribe @channel_name
-    @bindEvents()
+    @bindEvent()
 
-  bindEvents: =>
-    @channel.bind @event_name, (data)=>
-      data
-
-  addDevice: (data) ->
-    $('#device-list').append("<li id=#{data.id}>#{data.name}</li>") unless $("li##{data.id}").length > 0
-
+  bindEvent: =>
+    @channel.bind @event_name, (data) =>
+      @callback(data)
 

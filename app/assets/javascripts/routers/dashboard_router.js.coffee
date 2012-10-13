@@ -4,7 +4,8 @@ class RDC.Routers.DashboardRouter extends Backbone.Router
     'settings'  : 'settings'
 
   dashboard: ->
-    $('#container').html '<p>Dashboard</p><ul id="device-list"></ul>'
+    dashboardView = new RDC.Views.DashboardView
+    $('#container').html dashboardView.render().el
 
   settings: ->
     $('#container').html 'settings'

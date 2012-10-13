@@ -9,5 +9,5 @@ window.RDC =
     Backbone.history.start()
 
 $(document).ready ->
-  RDC.init()
   window.pusher = new Pusher '5b5b48789d293b83abdf'
+  RDC.init()
