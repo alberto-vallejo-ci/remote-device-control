@@ -3,6 +3,7 @@ source :rubygems
 ruby '1.9.3'
 
 gem 'haml'
+gem 'pusher'
 gem 'rails', '3.2.7'
 
 group :assets do

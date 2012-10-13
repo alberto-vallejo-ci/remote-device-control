@@ -6,3 +6,5 @@
 //= require ./rdc
 //
 //= require_tree ./routers
+//
+//= require rdc_pusher
