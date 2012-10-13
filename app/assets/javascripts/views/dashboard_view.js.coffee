@@ -12,6 +12,6 @@ class RDC.Views.DashboardView extends Backbone.View
     @
 
   addNewDevice: (data) =>
-    console.log data
-    @$('#devices').append "<li>#{data}</li>"
+    deviceView = new RDC.Views.DeviceView model: data
+    @$('#devices').append deviceView.render().el
 

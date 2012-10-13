@@ -50,3 +50,16 @@ $ bundle
 - [Heroku Demo](http://remote-device-control.herokuapp.com/)
 - [Travis CI](https://travis-ci.org/#!/alberto-vallejo-ci/remote-device-control)
 - [Code Climate](https://codeclimate.com/github/alberto-vallejo-ci/remote-device-control)
+
+##Pusher Channels and Events
+
+###Channel: devices
+
+This channel will be listening for devices events:
+
+####Event: new_connection
+
+This event will be triggered when a new device is connected. It will
+send the following parameters:
+- id:   Unique identification number
+- name: Device name
