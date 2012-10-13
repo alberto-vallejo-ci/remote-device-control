@@ -1,0 +1,90 @@
+/* header  ******************************************/
+
+header#main-header {
+  position: relative;
+  background: #fff;
+  .wrap {
+    padding: 10px 10px 0 215px;
+    min-height: 83px;
+    max-width: 975px;
+    min-width: 735px;
+  }
+  h1 {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 150px;
+    height: 83px;
+    background: url('/assets/sprite.png') 4px 8px no-repeat;
+    &:hover {
+      -moz-opacity: $mid-opacity;
+      -webkit-opacity: $mid-opacity;
+      opacity: $mid-opacity;
+    }
+    a {
+      display: block;
+      height: 100%;
+      text-indent: -9999px;
+    }
+  }
+
+}
+
+/* sub-navigation  ******************************************/
+
+nav.sub-navigation {
+  background: url(/assets/sprite.png) center -114px repeat-x;
+  border-bottom: 1px solid #fff;
+    .wrap{
+    padding-left: 204px;
+    max-width: 966px;
+    min-width: 756px;
+    min-height:36px;
+    li{
+      float: left;
+      border-right: 1px solid #aacecf;
+
+      a {
+        color: $white-text;
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+        font-weight: bold;
+        padding: 0 10px;
+        line-height: 36px;
+        float: left;
+        &:hover {
+          background: #77b1b2;
+        }
+        &.btn-active, &.btn-active:hover {
+          color: $white-text;
+        }
+      }
+    }
+  }
+}
+
+/* main section structure  ******************************************/
+
+section#main {
+  .wrap {
+    padding:35px 10px;
+  }
+}
+
+/* footer *****************************************************/
+
+#main-footer {
+  margin-top: 40px;
+  small {
+    margin-top: 20px;
+    padding: 10px 0 20px;
+    display: block;
+    text-align: center;
+    color: $dark-gray-text;
+  }
+  a {
+    color: $dark-aqua-text;
+    &:hover {
+        text-decoration: underline;
+    }
+  }
+}

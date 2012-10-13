@@ -1,0 +1,183 @@
+/* RESET HTML5 **************************/
+
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym,
+address, big, cite, code, del, dfn,
+font, img, ins, kbd, q, s, samp,
+strike, sub, sup, tt, var, dl, dt,
+dd, ol, ul, li, fieldset, form,
+label, legend, table, caption,
+tbody, tfoot, thead, tr,
+th, td, center, u, b, i {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-weight:normal;
+  font-style:normal;
+  font-size:100%;
+  vertical-align:baseline;
+  -webkit-font-smoothing: antialiased;}
+
+:focus  {
+  outline:0
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content:"";
+}
+
+blockquote, q {
+  quotes:"" "";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-weight:normal;
+  font-style:normal;
+  vertical-align:baseline;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, i, b, ul, ol, li,
+blockquote, em {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+hr {
+  margin:0;
+  padding:0;
+  border:0;
+  color:#000;
+  background-color:none;
+}
+
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ol, ul {
+  position: relative
+}
+
+.clearer {
+  clear: both
+}
+
+dt {
+  font-weight:bold
+}
+
+dd {
+  padding-left:15px
+}
+
+b {
+  font-weight:bold
+}
+
+blockquote {
+  padding-left:15px;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+input[type="submit"],
+input[type="button"],
+label {
+  cursor:pointer;
+}
+
+*:first-child+html .floated-group { /* IE7 clearfix */
+  zoom: 1;
+}
+
+/* Text base setting ***************************/
+
+body {
+  color: #444;
+  font-size: 14px;
+}
+
+a {
+  color: $purple-text;
+  text-decoration: none;
+  &:hover {
+    color: $gray-text;
+  }
+}
+
+p, ol, ul, blockquote, li{
+  line-height: 1.3em;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 0;
+}
+
+h1 {
+  font-size: 19px;
+  font-weight:bold;
+}
+
+h2 {
+  font-size: 17px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 15px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+small {
+  font-size: 11px;
+  display: block;
+}
+
+
+/* tables base */
+
+table {
+  width: 100%;
+  margin-bottom: 10px;
+  td, th {
+    padding: 5px;
+    text-align: left;
+  }
+}
+
+/* forms & inputs base ****************************/
+
+input:-webkit-autofill {
+background-color: #fff !important;
+background-image: none;
+}
+

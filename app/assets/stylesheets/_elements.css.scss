@@ -1,0 +1,167 @@
+/* common appareances & properties *****************/
+
+.align-right {
+  margin-top: 30px;
+  font-size: 12px;
+  text-align: right;
+}
+
+.float-left { float:left }
+
+.float-right { float:right }
+
+.text-content {
+  p, blockquote, ul, ol {
+    margin-bottom: $line-break-margin;
+  }
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.label-note {
+  font-size: 0.8em;
+}
+
+.vertical-topped {
+  vertical-align: top;
+}
+
+.vertical-middled {
+  vertical-align: middle;
+}
+
+/* reusable containers *****************************/
+
+.wrap {
+  margin:0 auto;
+  max-width: 1180px;
+  min-width: 960px;
+  padding: 0 10px;
+  position: relative;
+}
+
+span.separator {
+  width: 1px;
+  height: 100%;
+  background: #bbb;
+  display: block;
+}
+
+/* tabs nav ****************************/
+
+.tabbed-header {
+  margin-bottom: 30px;
+  @extend .floated-group;
+  h1 {
+    font-size: 21px;
+    float: left;
+    width: 25%;
+  }
+  nav {
+    @include border-radiused($default-radius);
+    @extend .green-gradient-bg;
+    border: 1px solid #ADB139;
+    float: right;
+    width: 74%;
+    ul {
+      @extend .floated-group;
+      li {
+        @include tab-fluid(49.9%);
+        float: left;
+        border-left: 1px solid #ADB139;
+        a, a:visited {
+          @extend .green-gradient-bg;
+          text-align: center;
+          display: block;
+          padding: 0 15px;
+          line-height: 35px;
+          font-weight: 600;
+          color: #4D4D4D;
+          text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+          &.tab-active, &:hover {
+            color: #D2CBCB;
+            text-shadow: 0px 0px 2px #000;
+            background: #4D4D4D;
+          }
+        }
+        &:last-child a {
+          @include border-radiused(0px 3px 3px 0px);
+        }
+        &:first-child {
+          border-left: none;
+          a {
+            @include border-radiused(3px 0px 0px 3px)
+          }
+        }
+      }
+    }
+  }
+}
+
+/* forms ****************************/
+
+.input-line {
+  margin: 3px 0
+}
+
+.button-line {
+  margin: 10px 0 3px;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="telephone"],
+input[type="search"],
+textarea {
+  @include shadow($default-shadow);
+  @include border-radiused($default-radius);
+  @include appearance(none);
+  width: 220px;
+  padding: 5px 10px;
+  font-size: 14px;
+  height: 19px;
+  font-weight: 300;
+  border: 1px solid #acacac;
+  background: #fff;
+  color: #555;
+  margin: 0;
+  resize: none;
+  &:hover {
+    border: 1px solid #73afb6;
+  }
+  &:focus {
+    border: 1px solid #73afb6;
+    @include shadow(inset 0px 0px 5px #73afb6);
+  }
+  &.input-small {
+    width: 70px;
+  }
+}
+
+textarea {
+  height: 6em;
+  vertical-align: top;
+}
+
+/* buttons & links *******************************************************/
+
+/* links */
+
+.small-link-btn {
+  font-size: 12px;
+  text-shadow: 0px 1px 0px #fff;
+}
+
+.right-positioned-item {
+  position: absolute;
+  bottom: 10px;
+  right:10px;
+}
