@@ -2,6 +2,7 @@ source :rubygems
 
 ruby '1.9.3'
 
+gem 'addressable', '2.3.2'
 gem 'haml'
 gem 'pusher'
 gem 'rails', '3.2.7'
