@@ -10,7 +10,13 @@ The principal function of this application is to send messages to the client app
 
 ##Setup
 
-**Note:** Make sure you have installed QT. Follow instructions at [QT on Github](https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit) 
+**Notes:** 
+
+- Make sure you have installed QT. Follow instructions at [QT on Github](https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit) 
+
+- You need to declare the variables ENV['USER'] and ENV['PASSWORD'] in order to be able to login.
+
+- Heroku creditials, Username = 'foo', Password = 'bar'
 
 ###First Step
 Clone repositoy in your work station and bundle:
@@ -19,8 +25,14 @@ Clone repositoy in your work station and bundle:
 
 $ git clone git@github.com:alberto-vallejo-ci/remote-device-control.git 
 
-RDC
-
 $ cd RDC
 
 $ bundle
+
+```
+
+##Application Servers
+
+- [Heroku Demo](http://remote-device-control.herokuapp.com/)
+- [Travis CI](https://travis-ci.org/#!/alberto-vallejo-ci/remote-device-control)
+- [Code Climate](https://codeclimate.com/github/alberto-vallejo-ci/remote-device-control)
