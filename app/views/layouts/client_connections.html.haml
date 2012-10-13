@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title Remote Device Control
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "client_connections"
+    = csrf_meta_tags
+  %body
+    %section#main
+      .wrap
+        #container
+          = yield
+
+    %footer
+    = render 'shared/rdc_pusher'

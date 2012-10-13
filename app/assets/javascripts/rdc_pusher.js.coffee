@@ -1,3 +1,4 @@
+@RDC ||= {}
 class RDC.Pusher
   constructor: (@channel_name, @event_name, @pusher, @callback) ->
     @subscribe()

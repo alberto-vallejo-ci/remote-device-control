@@ -1,0 +1,12 @@
+%h1 Client
+
+= form_tag(controller: 'client_connections', action: 'create', method: 'post') do
+  = label_tag :id, 'ID'
+  = text_field_tag :id
+  = submit_tag 'Connect'
+
+:javascript
+  $(document).ready(function(){
+    window.pusher = new Pusher('5b5b48789d293b83abdf');
+    var client_pusher = new RDC.Pusher('admin_messages', 'new_device', window.pusher);
+  });
