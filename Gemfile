@@ -33,3 +33,7 @@ group :test do
   gem 'guard-spork'
   gem 'rspec-rails'
 end
+
+group :production do
+  gem 'pg'
+end
