@@ -1,5 +1,5 @@
 RDC::Application.routes.draw do
-  resources :client, only: :index
   resources :admin, only: :index
+  resources :client_connections, only: [:create, :index, :show]
   root to: 'admin#index'
 end
