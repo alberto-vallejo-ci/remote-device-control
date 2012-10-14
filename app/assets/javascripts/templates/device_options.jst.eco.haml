@@ -1,37 +1,40 @@
-#device-details
+#device-details.with_border_buttom
   = image_tag '/assets/side_bar/ipad.jpg'
-  %p
-    %span.green-leyend Device
-    %span #<%= @id %>
-    %span.green-leyend Name
-    %span <%= @name %>
-#timer
-  = image_tag '/assets/side_bar/clock.png'
-  %span.green-leyend Remaining time
-  #clock 00:30
+  #details
+    %ul
+      %li.green-leyend Device 
+      %li #1
+      %li.green-leyend Name Id 
+      %li SkyWalker Device
+#timer.with_border_buttom
+  #remaining-time
+    = image_tag '/assets/side_bar/clock.png'
+    #remaining-text.green-leyend Remaining time
+  #clock 
+    00:30
   #paused
     = image_tag '/assets/side_bar/pause.png'
-    %span Paused
-#add-time
+    #paused-text 
+      Paused
+#add-time.with_border_buttom
   #message
     = image_tag '/assets/side_bar/plus.png'
-    %span Add Time
+    #add-time-text Add Time
   #bottons
     = image_tag '/assets/side_bar/plus15.png', class: 'add-time', data: { time: '15', klass: 'fifteen'}
-    = image_tag '/assets/side_bar/plus30.png', class: 'add-time', data: { time: '30', klass: 'thirteen' }
+    = image_tag '/assets/side_bar/plus30.png', class: 'add-time', data: { time: '30', klass: 'thirteen' } 
     = image_tag '/assets/side_bar/plus60.png', class: 'add-time', data: { time: '60', klass: 'sixty' }
   #actions
     #cancel
       = image_tag '/assets/side_bar/cancel.png'
-      %span Cancel
-    #done
+      #cancel-text Cancel
+    #done 
       = image_tag '/assets/side_bar/done.png'
-      %span Done
+      #done-text Done
 #alerts
   #send-alert
     = image_tag '/assets/side_bar/alert.png'
-    %span Send Alert
+    #alert-text Send Alert
   #lock-device
     = image_tag '/assets/side_bar/lock.png'
-    %span Lock Device
-
+    #lock-text Lock Device

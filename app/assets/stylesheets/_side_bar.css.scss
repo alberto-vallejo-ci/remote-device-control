@@ -1,16 +1,205 @@
 #side-bar {
 
   .green-leyend {
-    color: #52C597;
+    color: #85B9BF;
   }
 
   #header {
-    border-bottom: solid 1px #C9C7C7;
     text-align: center;
   }
 
-  #device-details {
+  .with_border_buttom{
     border-bottom: solid 1px #C9C7C7;
     margin-top: 15px;
+  }
+
+  #device-details {
+    display: inline-block;
+    padding-bottom: 15px;
+    width: 100%;
+
+    img {
+      float: left;
+      margin-left: 15px;
+    }
+
+    #details {
+      float: right;
+      width: 65%;
+    }
+  }
+
+  #timer {
+    #remaining-time {
+      display: inline-block;
+      margin-left: 15px;
+      width: 100%;
+
+      img {
+        float: left;
+      }
+
+      #remaining-text {
+        float: right;
+        font-size: 18px;
+        margin-top: 5px;
+        width: 85%;
+      }
+    }
+
+    #clock {
+      font-size: 80px;
+      font-family: 'Bubbler One', sans-serif;
+      margin-left: 30px;
+    }
+
+    #paused {
+      background: #E6E6E6;
+      cursor: pointer;
+      display: inline-block;
+      margin: 0 0 15px 15px;
+      padding: 5px 0 5px 0;
+      width: 87%;
+
+      img {
+        float: left;
+        margin-left: 11px;
+      } 
+
+      #paused-text {
+        float: right;
+        font-size: 18px;
+        margin-top: 5px;
+        width: 80%;
+      }
+    }
+
+  }
+
+  #add-time {
+    #message {
+      display: inline-block;
+      margin-bottom: 10px;
+      width: 100%;
+
+      img {
+        float: left;
+        margin-left: 15px;
+      }
+
+      #add-time-text {
+        float: right;
+        font-size: 18px;
+        margin-top: 4px;
+        width: 78%;
+      }
+    }
+
+    #bottons {
+      margin: 0 0 15px 20px;
+      img{
+        cursor: pointer;
+      }
+    }
+
+    #actions {
+      display: inline-block;
+      margin-bottom: 10px;
+      width: 100%;
+
+      #cancel {
+        background: #E6E6E6;
+        cursor: pointer;
+        display: inline-block;
+        float: left;
+        margin-left: 15px;
+        padding: 6px 0 6px 0;
+        width: 44%;
+
+        img {
+          float: left;
+          margin-left: 10px;
+        }
+
+        #cancel-text {
+          float: right;
+          font-size: 17px;
+          margin-top: 3px;
+          width: 65%;
+        }
+      }
+
+      #done {
+        background: #7ACCC8;
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        margin-right: 15px;
+        padding: 6px 0 6px 0;
+        width: 43%;
+
+        img {
+          float: left;
+          margin-left: 10px;
+        }
+
+        #done-text {
+          float: right;
+          font-size: 17px;
+          margin-top: 3px;
+          width: 65%;
+        }
+      }
+    }
+  }
+
+  #alerts {
+    margin-top: 10px;
+
+    #send-alert {
+      background: #FDD843;
+      cursor: pointer;
+      display: inline-block;
+      margin: 0 0 5px 15px;
+      padding: 5px 0 5px 0;
+      width: 87%;
+
+      img {
+        float: left;
+        margin-left: 11px;
+      } 
+
+      #alert-text {
+        float: right;
+        font-size: 18px;
+        margin-top: 5px;
+        width: 80%;
+      }
+    }
+
+    #lock-device {
+      background: #EF3A65;
+      cursor: pointer;
+      display: inline-block;
+      margin: 0 0 15px 15px;
+      padding: 5px 0 5px 0;
+      width: 87%;
+
+      img {
+        float: left;
+        margin-left: 11px;
+      } 
+
+      #lock-text {
+        float: right;
+        font-size: 18px;
+        margin-top: 5px;
+        width: 80%;
+      }
+    }
+  }
+
+  #footer {
+    text-align: center;
   }
 }
