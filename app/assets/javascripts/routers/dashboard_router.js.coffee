@@ -4,10 +4,12 @@ class RDC.Routers.DashboardRouter extends Backbone.Router
     'admin/:option'   : 'adminDashboard'
 
   welcomeMessage: ->
-    $('#main').html 'Bienvenido!!'
+    $('#container').remove()
+    $('#main-container').append 'Bienvenido!!'
 
   adminDashboard: (option) ->
     adminDashboardView = new RDC.Views.AdminDashboardView active: option
-    $('#main').html adminDashboardView.render().el
+    $('#container').remove()
+    $('#main-container').append adminDashboardView.render().el
 
 

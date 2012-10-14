@@ -6,9 +6,9 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    #main.wrap
-      = yield
-
-    %footer
-      = render 'shared/footer'
+    %section#main
+      #main-container.wrap.page-aside
+        = render 'shared/header'
+        %aside
+          Side Bar
     = render 'shared/rdc_pusher'

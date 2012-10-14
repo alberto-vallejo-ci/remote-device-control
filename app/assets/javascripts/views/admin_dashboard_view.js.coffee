@@ -24,5 +24,6 @@ class RDC.Views.AdminDashboardView extends Backbone.View
     @
 
   activeTab: ->
-    @$(".tabs .#{@options.active}").addClass 'tab-active'
+    $('#main-navigation ul li a').removeClass 'tab-active'
+    $("#main-navigation .#{@options.active}").addClass 'tab-active'
     @$("##{@options.active}").fadeIn()

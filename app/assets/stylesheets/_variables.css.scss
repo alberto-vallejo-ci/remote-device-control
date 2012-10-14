@@ -24,6 +24,7 @@ $error-bg: #FFEFCF;
 $thin-box-padding: 10px;
 $wide-box-padding: 15px;
 $line-break-margin: 15px;
+$default-font-family: 'Open Sans', 'Trebuchet MS', Trebuchet, Arial, sans-serif;
 
 /* mixin defaults ************************/
 $default-radius: 3px;
@@ -65,3 +66,4 @@ $default-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
   width: $width;
   *width: 130px;
 }
+

@@ -9,7 +9,9 @@ class RDC.Views.DeviceView extends Backbone.View
     'click .send-msg'  : 'sendMessage'
 
   render: ->
-    @$el.html @template @model.toJSON()
+    model = @model.toJSON()
+    @$el.html @template model
+    @$el.addClass model.device_class
     @
 
   addTime: (event) ->
