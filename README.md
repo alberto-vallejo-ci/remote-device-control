@@ -63,3 +63,14 @@ This event will be triggered when a new device is connected. It will
 send the following parameters:
 - id:   Unique identification number
 - name: Device name
+
+###Channel: admin_messages
+
+This channel will be listening for admin messages to clients:
+
+####Event: new_message
+
+This event will be triggered when the admin send a message to a client. It will
+send the following parameters:
+- meessage: message
+- action: action to be triggered
