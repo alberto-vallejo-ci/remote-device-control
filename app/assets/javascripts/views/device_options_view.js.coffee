@@ -45,6 +45,7 @@ class RDC.Views.DeviceOptionsView extends Backbone.View
   success: (type, message, klass) ->
     if type == 'clock'
       device = ($ "#device_#{@model.id}")
+      device.removeClass 'fifteen thirteen sixty'
       device.addClass klass
       ($ "#device_#{@model.id} #timer .zero-time").hide()
       ($ "#device_#{@model.id} #timer .timer-wrapper").fadeIn()
