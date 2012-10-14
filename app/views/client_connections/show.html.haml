@@ -1,4 +1,12 @@
 %h1 Show
+#counter
 #messages-container
-  %p Mensajes
-  %ul
+  %p Messages
+  %ul#messages-list
+
+:javascript
+  $(document).ready(function(){
+    window.newMessage = new RDC.ClientConnectioUtilities();
+    window.newMessage.receiveMessages('admin_messages', 'new_message', window.pusher);
+  });
+  
