@@ -30,6 +30,7 @@ class RDC.Views.DeviceView extends Backbone.View
 
   showDeviceOptions: ->
     deviceOptionsView = new RDC.Views.DeviceOptionsView model: @model
+    ($ '#side-bar #header img').attr 'src', '/assets/side_bar/header.png'
     ($ "#side-bar .device-options").remove()
 
     ($ '#side-bar #header').after deviceOptionsView.render().el
