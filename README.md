@@ -45,6 +45,11 @@ $ bundle
 
 ```
 
+After you have the application running you can:
+
+  - Enter to the application and it should send you to the devices admin
+  - Connect to an existing admin entering to: /client_connections
+
 ##Application Servers
 
 - [Heroku Demo](http://remote-device-control.herokuapp.com/)
