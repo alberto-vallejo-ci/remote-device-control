@@ -1,0 +1,37 @@
+#device-details
+  = image_tag '/assets/side_bar/ipad.jpg'
+  %p
+    %span.green-leyend Device
+    %span #<%= @id %>
+    %span.green-leyend Name
+    %span <%= @name %>
+#timer
+  = image_tag '/assets/side_bar/clock.png'
+  %span.green-leyend Remaining time
+  #clock 00:30
+  #paused
+    = image_tag '/assets/side_bar/pause.png'
+    %span Paused
+#add-time
+  #message
+    = image_tag '/assets/side_bar/plus.png'
+    %span Add Time
+  #bottons
+    = image_tag '/assets/side_bar/plus15.png', class: 'add-time', data: { time: '15', klass: 'fifteen'}
+    = image_tag '/assets/side_bar/plus30.png', class: 'add-time', data: { time: '30', klass: 'thirteen' }
+    = image_tag '/assets/side_bar/plus60.png', class: 'add-time', data: { time: '60', klass: 'sixty' }
+  #actions
+    #cancel
+      = image_tag '/assets/side_bar/cancel.png'
+      %span Cancel
+    #done
+      = image_tag '/assets/side_bar/done.png'
+      %span Done
+#alerts
+  #send-alert
+    = image_tag '/assets/side_bar/alert.png'
+    %span Send Alert
+  #lock-device
+    = image_tag '/assets/side_bar/lock.png'
+    %span Lock Device
+

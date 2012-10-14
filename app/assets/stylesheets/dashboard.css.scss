@@ -121,19 +121,17 @@ section#main {
     }
 
 
-    &.runing{
-      border-color: #a2d59f;
-      background: url('/assets/ipad.png') center 20px no-repeat;
+    &.thirteen{
+      border-color: #a2d59f !important;
       span.left, & {
-        background-color: #a2d59f;
+        background-color: #a2d59f !important;
       }
     }
 
-    &.blocked{
-      border-color: #faae60;
-      background: url('/assets/ipad.png') center 20px no-repeat;
+    &.fifteen{
+      border-color: #faae60 !important;
       span.left, & {
-        background-color: #faae60;
+        background-color: #faae60 !important;
       }
     }
 
@@ -172,15 +170,20 @@ section#main {
           height: 77px;
         }
         .timer-wrapper {
+          display: block;
+          overflow: hidden;
+          width: 300px;
+          .counter {
+            margin-left: -112px !important;
+          }
         }
       }
     }
 
-    &.paused{
-      border-color: #87d4d2;
-      background: url('/assets/ipad.png') center 20px no-repeat;
+    &.sixty{
+      border-color: #87d4d2 !important;
       span.left, & {
-        background-color: #87d4d2;
+        background-color: #87d4d2 !important;
       }
     }
 

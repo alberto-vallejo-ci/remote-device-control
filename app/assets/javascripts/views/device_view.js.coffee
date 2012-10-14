@@ -8,15 +8,13 @@ class RDC.Views.DeviceView extends Backbone.View
     style: 'display:none;'
 
   events:
-    'click .add-time'       : 'addTime'
-    'click .send-msg'       : 'sendMessage'
-    'click .send-message'   : 'showMessageForm'
     'click .basic-data'        : 'showTimerOptions'
 
   render: ->
     model = @model.toJSON()
     @$el.html @template model
     @$el.addClass model.device_class
+    @$el.attr 'id', "device_#{@model.id}"
     @fadeDevice()
     @
 
@@ -25,48 +23,14 @@ class RDC.Views.DeviceView extends Backbone.View
     @$el.fadeIn()
     $('.empty').fadeIn()
 
-  addTime: (event) ->
-    event.preventDefault()
-    time = ($ event.target).data().time
-    message = "00:#{time}:00"
-    type = 'clock'
-    @makeRequest message, type
-
-  sendMessage: (event) ->
-    event.preventDefault()
-    message = @$("#message#{@model.id}").val()
-    type = 'show'
-    @makeRequest message, type
-
-  showMessageForm: (event) ->
-    event.preventDefault()
-    @$('.message-form').fadeIn()
-
-  makeRequest: (message, type) ->
-    data = {'id': @model.id, 'message': message, 'type': type}
-    $.ajax
-      type: "POST"
-      url: "/message"
-      data: data
-      success: =>
-        @success(type, message)
-
-  success: (type, message) ->
-    if type == 'clock'
-      $("#1.counter").html ''
-      $("#1.counter").countdown
-        stepTime: 60
-        format: "hh:mm:ss"
-        startTime: message
-        digitImages: 6
-        digitWidth: 53
-        digitHeight: 77
-        image: "../assets/digits.png"
-
   showTimerOptions: (event) ->
     @$('.basic-data').hide()
     @$('#timer').fadeIn()
     @showDeviceOptions()
 
   showDeviceOptions: ->
-    console.log 'show'
+    deviceOptionsView = new RDC.Views.DeviceOptionsView model: @model
+    ($ "#side-bar .device-options").remove()
+
+    ($ '#side-bar #header').after deviceOptionsView.render().el
+    ($ "#side-bar .device-options").fadeIn()
