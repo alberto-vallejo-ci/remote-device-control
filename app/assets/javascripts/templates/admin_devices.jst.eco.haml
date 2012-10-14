@@ -1,20 +1,20 @@
 %ul#devices-list
-  %li.runing
-    %div
-      %span.time 30 : 00
-      %span.left left time
-  %li.blocked
-    %div
-      %span.time 30 : 00
-      %span.left left time
+  -#%li.runing
+    -#.basic-data
+      -#%span.time 30 : 00
+      -#%span.left left time
+  -#%li.blocked
+    -#.basic-data
+      -#%span.time 30 : 00
+      -#%span.left left time
   %li.on_hold
-    %div.available
+    .basic-data.available
       %span.time available
       %span.left Tap to add time
-  %li.paused
-    %div
-      %span.time 30 : 00
-      %span.left left time
+  -#%li.paused
+    -#.basic-data
+      -#%span.time 30 : 00
+      -#%span.left left time
   %li.empty
-    %div
+    .basic-data
       %span Device slot

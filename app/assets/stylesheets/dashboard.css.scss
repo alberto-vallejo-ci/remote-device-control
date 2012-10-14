@@ -85,7 +85,9 @@ section#main {
     margin: 7px;
     padding: 15px;
 
-    div {
+    .message-form input { width: 100px }
+
+    .basic-data {
       display: block;
       height: 100%;
       position: relative;
