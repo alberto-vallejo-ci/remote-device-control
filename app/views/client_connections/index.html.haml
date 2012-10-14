@@ -7,6 +7,5 @@
 
 :javascript
   $(document).ready(function(){
-    window.pusher = new Pusher('5b5b48789d293b83abdf');
     var client_pusher = new RDC.Pusher('admin_messages', 'new_device', window.pusher);
   });

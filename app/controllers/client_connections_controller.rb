@@ -6,6 +6,5 @@ class ClientConnectionsController < ApplicationController
      redirect_to client_connection_path(params[:id])
   end
   def show
-    render layout: false
   end
 end
