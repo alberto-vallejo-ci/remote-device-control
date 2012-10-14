@@ -1,7 +1,7 @@
 class RDC.ClientConnectioUtilities
 
   setCountdown: (data)=>
-    time = data.info
+    time = data.message
     $("#counter").html ''
     $("#counter").countdown
       stepTime: 60
@@ -20,5 +20,5 @@ class RDC.ClientConnectioUtilities
     @setCountdown(data) if data.action == 'clock'
 
   showMessage: (data)=>
-    $('#messages-list').append "<li>#{data.info}</li>"
+    $('#messages-list').append "<li>#{data.message}</li>"
    
