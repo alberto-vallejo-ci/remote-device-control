@@ -8,7 +8,7 @@ class RDC.Views.DeviceView extends Backbone.View
     style: 'display:none;'
 
   events:
-    'click .basic-data'        : 'showTimerOptions'
+    'click .basic-data, #timer'        : 'showTimerOptions'
 
   render: ->
     model = @model.toJSON()
