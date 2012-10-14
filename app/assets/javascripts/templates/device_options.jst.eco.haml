@@ -35,6 +35,9 @@
   #send-alert
     = image_tag '/assets/side_bar/alert.png'
     #alert-text Send Alert
+  .message-form
+    %input{type: 'text', style: 'width: 158px', id: 'message_<%= @id %>'}
+    = link_to 'Enviar', '#', class: 'send-msg'
   #lock-device
     = image_tag '/assets/side_bar/lock.png'
     #lock-text Lock Device

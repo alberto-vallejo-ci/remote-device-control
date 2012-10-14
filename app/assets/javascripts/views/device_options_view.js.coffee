@@ -9,7 +9,7 @@ class RDC.Views.DeviceOptionsView extends Backbone.View
   events:
     'click .add-time'       : 'addTime'
     'click .send-msg'       : 'sendMessage'
-    'click .send-message'   : 'showMessageForm'
+    'click  #send-alert'    : 'showMessageForm'
 
   render: ->
     @$el.html(@template @model.toJSON())
@@ -25,7 +25,7 @@ class RDC.Views.DeviceOptionsView extends Backbone.View
 
   sendMessage: (event) ->
     event.preventDefault()
-    message = @$("#message#{@model.id}").val()
+    message = @$("#message_#{@model.id}").val()
     type = 'show'
     @makeRequest message, type
 
@@ -58,4 +58,7 @@ class RDC.Views.DeviceOptionsView extends Backbone.View
         digitWidth: 53
         digitHeight: 77
         image: "../assets/digits.png"
+    else
+      $('.message-form').fadeOut()
+      @$("#message_#{@model.id}").val('')
 
