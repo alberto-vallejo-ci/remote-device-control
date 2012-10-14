@@ -1,2 +1,15 @@
+%p -------------------------------------------------
 %h2 <%= @name %>
 %span device number: <%= @id%>
+%p
+  = link_to '15 Mins || ', '#', class: 'add-time', 'data-time' => '15'
+  = link_to '30 Mins || ', '#', class: 'add-time', 'data-time' => '30'
+  = link_to '60 Mins', '#', class: 'add-time', 'data-time' => '60'
+%p
+  %span Message
+  %input{:style => "width:100px", :type => "text", id: "input_<%= @id%>"}
+  = link_to 'Enviar', '#', class: 'send-msg'
+%p
+  %div{class: 'counter', id: "<%= @id%>"}
+%p ------------------------------------------------
+

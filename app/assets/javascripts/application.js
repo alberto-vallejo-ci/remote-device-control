@@ -11,4 +11,5 @@
 //= require_tree ./views
 //
 //= require rdc_pusher
+//= require jquery.countdown
 
