@@ -1,15 +1,9 @@
-%span.name <%= @name %>
-
-.links
-  %span Add Time (minutes)
-  = link_to '+15', '#', class: 'add-time', 'data-time' => '15'
-  = link_to '+30', '#', class: 'add-time', 'data-time' => '30'
-  = link_to '+60', '#', class: 'add-time', 'data-time' => '60'
-
-= link_to 'Send Message', '#', class: 'send-message'
-.message-form{ style: 'display: none;' }
-  %input{ id: 'message<%= @id %>', type: 'text' }
-  = link_to 'Enviar', '#', class: 'send-msg'
-
-.counter{id: "<%= @id%>"}
+.basic-data.available
+  %span.time available
+  %span.left Tap to add time
+#timer{ style: 'display:none;' }
+  %span.watch
+  .zero-time
+  .timer-wrapper{ style: 'display:none;' }
+    .counter{id: "<%= @id%>"}
 

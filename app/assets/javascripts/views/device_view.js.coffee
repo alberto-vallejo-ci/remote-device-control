@@ -11,6 +11,7 @@ class RDC.Views.DeviceView extends Backbone.View
     'click .add-time'       : 'addTime'
     'click .send-msg'       : 'sendMessage'
     'click .send-message'   : 'showMessageForm'
+    'click .basic-data'        : 'showTimerOptions'
 
   render: ->
     model = @model.toJSON()
@@ -61,3 +62,11 @@ class RDC.Views.DeviceView extends Backbone.View
         digitWidth: 53
         digitHeight: 77
         image: "../assets/digits.png"
+
+  showTimerOptions: (event) ->
+    @$('.basic-data').hide()
+    @$('#timer').fadeIn()
+    @showDeviceOptions()
+
+  showDeviceOptions: ->
+    console.log 'show'

@@ -1,7 +1,7 @@
 %header#main-header
   .wrap
-    %h1#logo Logo Here
+    = image_tag '/assets/logo.png'
     %nav#main-navigation
       %ul
-        %li= link_to 'Devices', '#admin/devices', class: 'devices'
-        %li= link_to 'Settings', '#admin/settings', class: 'settings'
+        %li= link_to 'Admin', '#admin/devices', class: 'devices'
+        %li= link_to 'Device', '/client_connections'
