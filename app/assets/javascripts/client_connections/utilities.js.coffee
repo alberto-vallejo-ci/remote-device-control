@@ -12,12 +12,12 @@ class RDC.ClientConnectioUtilities
     @lockDevice(data)   if data.action is 'lock'
 
   showMessage: (data)=>
-    $('#messages-list').append "<li>#{data.message}</li>"
+    $(".wrapper-container##{data.id} #messages-list").append "<li>#{data.message}</li>"
 
   setCountdown: (data)=>
     time = data.message
-    $("#counter").html ''
-    $("#counter").countdown
+    $(".wrapper-container##{data.id} #counter").html ''
+    $(".wrapper-container##{data.id} #counter").countdown
       stepTime: 60
       format: "hh:mm:ss"
       startTime: time
@@ -27,5 +27,5 @@ class RDC.ClientConnectioUtilities
       image: "../assets/digits.png"
 
   lockDevice: (data) ->
-    $('#messages-list').append "<li>#{data.message}</li>"
+    $('.wrapper-container##{data.id} #messages-list').append "<li>#{data.message}</li>"
    
