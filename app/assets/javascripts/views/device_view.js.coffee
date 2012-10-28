@@ -24,7 +24,7 @@ class RDC.Views.DeviceView extends Backbone.View
     $('.empty').fadeIn()
 
   showTimerOptions: (event) ->
-    @$('.basic-data').hide()
+    @$('.basic-data span').text('')
     @$('#timer').fadeIn()
     @showDeviceOptions()
 

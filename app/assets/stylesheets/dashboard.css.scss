@@ -138,6 +138,7 @@ section#main {
     &.on_hold{
       border-color: #fff;
       background: url('/assets/ipad.png') center 20px no-repeat #fff;
+      cursor: pointer;
       .available{
         span {
           letter-spacing: 0px;
