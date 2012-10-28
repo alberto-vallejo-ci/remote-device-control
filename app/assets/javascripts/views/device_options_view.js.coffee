@@ -10,6 +10,7 @@ class RDC.Views.DeviceOptionsView extends Backbone.View
     'click .add-time'       : 'addTime'
     'click .send-msg'       : 'sendMessage'
     'click  #send-alert'    : 'showMessageForm'
+    'click #lock-device'    : 'lockDevice'
 
   render: ->
     @$el.html(@template @model.toJSON())
@@ -27,6 +28,12 @@ class RDC.Views.DeviceOptionsView extends Backbone.View
     event.preventDefault()
     message = @$("#message_#{@model.id}").val()
     type = 'show'
+    @makeRequest message, type
+
+  lockDevice: (event) ->
+    event.preventDefault()
+    message = 'Locked'
+    type = 'lock'
     @makeRequest message, type
 
   makeRequest: (message, type, klass = null) ->

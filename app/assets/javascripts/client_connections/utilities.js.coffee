@@ -1,5 +1,19 @@
 class RDC.ClientConnectioUtilities
 
+  newDevice: (@chanel_name, @event_name, @pusher_chanel) =>
+    new RDC.Pusher @chanel_name, @event_name, @pusher_chanel
+
+  receiveMessages: (@chanel_name, @event_name, @pusher_chanel, @callback) =>
+    newMessage = new RDC.Pusher @chanel_name, @event_name, @pusher_chanel, @router
+
+  router: (data) =>
+    @showMessage(data)  if data.action == 'show'
+    @setCountdown(data) if data.action == 'clock'
+    @lockDevice(data)   if data.action is 'lock'
+
+  showMessage: (data)=>
+    $('#messages-list').append "<li>#{data.message}</li>"
+
   setCountdown: (data)=>
     time = data.message
     $("#counter").html ''
@@ -12,16 +26,6 @@ class RDC.ClientConnectioUtilities
       digitHeight: 77
       image: "../assets/digits.png"
 
-  newDevice: (@chanel_name, @event_name, @pusher_chanel) =>
-    new RDC.Pusher @chanel_name, @event_name, @pusher_chanel
-
-  receiveMessages: (@chanel_name, @event_name, @pusher_chanel, @callback) =>
-    newMessage = new RDC.Pusher @chanel_name, @event_name, @pusher_chanel, @router
-
-  router: (data) =>
-    @showMessage(data)  if data.action == 'show'
-    @setCountdown(data) if data.action == 'clock'
-
-  showMessage: (data)=>
+  lockDevice: (data) ->
     $('#messages-list').append "<li>#{data.message}</li>"
    
