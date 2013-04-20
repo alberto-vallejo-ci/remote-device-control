@@ -18,11 +18,11 @@ The principal function of this application is to send messages to the client app
 
 ```
 
-export PUSHER_APP_ID=19460
+export PUSHER_APP_ID=42245
 
-export PUSHER_KEY=5b5b48789d293b83abdf
+export PUSHER_KEY=77c523ef7a18fa97e600
 
-export PUSHER_SECRET=c2c7653a5ec434543d37
+export PUSHER_SECRET=ce05d972c5859d51d2b5
 
 export USER=foo
 

@@ -11,5 +11,5 @@ window.RDC =
     Backbone.history.start()
 
 $(document).ready ->
-  window.pusher = new Pusher '5b5b48789d293b83abdf'
+  window.pusher = new Pusher '77c523ef7a18fa97e600'
   RDC.init()
